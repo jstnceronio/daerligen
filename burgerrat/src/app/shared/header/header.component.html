@@ -1,0 +1,67 @@
+<header class="header">
+  <nav class="nav">
+    <div class="brand">
+      <a href="#" class="brand-link">
+        <img class="brand-image" src="/assets/images/logo.png" alt="">
+      </a>
+    </div>
+    <div class="toggle-button" (click)="toggleMobileMenu()">
+      <button type="button" class="toggle-button-icon">
+        <svg class="toggle-button-svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+    <div class="menu lg:flex lg:gap-x-12">
+      <a href="#" class="menu-item">Features</a>
+      <a href="#" class="menu-item">Marketplace</a>
+      <a href="#" class="menu-item">Company</a>
+    </div>
+    <div class="languages lg:flex lg:flex-1 lg:justify-end">
+      <a href="#" class="languages-link">DE | FR | IT | EN</a>
+    </div>
+  </nav>
+  <!-- Mobile menu, show/hide based on menu open state. -->
+  <div class="mobile-menu lg:hidden" role="dialog" *ngIf="isMobileMenuOpen" (@mobile-menu.start)="isMobileMenuOpen = true" (@mobile-menu.done)="isMobileMenuOpen = false">
+    <!-- Background backdrop, show/hide based on slide-over state. -->
+    <div class="backdrop"></div>
+    <div class="mobile-menu-content">
+      <div class="mobile-menu-header">
+        <a href="#" class="brand-link">
+          <img class="brand-image" src="/assets/images/logo.png" alt="">
+        </a>
+        <button type="button" class="mobile-menu-close" (click)="toggleMobileMenu()">
+          <svg class="mobile-menu-close-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu-body">
+        <div class="menu-item">
+          <button type="button" class="menu-item-button">
+            Product
+            <svg class="menu-item-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <!-- 'Product' flyout menu, show/hide based on flyout menu state. -->
+          <div class="menu-item-flyout">
+            <div class="menu-item-flyout-inner">
+              <a href="#" class="menu-item-link">Features</a>
+              <a href="#" class="menu-item-link">Enterprise</a>
+              <a href="#" class="menu-item-link">Support</a>
+              <a href="#" class="menu-item-link">Pricing</a>
+              <a href="#" class="menu-item-link">Cart</a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="menu-item-link">Features</a>
+        <a href="#" class="menu-item-link">Marketplace</a>
+        <a href="#" class="menu-item-link">Company</a>
+        <div class="menu-item">
+          <a href="#" class="menu-item-link">DE | FR | IT | EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
