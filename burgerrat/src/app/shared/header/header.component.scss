@@ -1,9 +1,9 @@
 .header {
-  @apply bg-white  ml-8;
+  @apply bg-white mt-6;
 }
 
 .nav {
-  @apply mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8;
+  @apply mx-auto flex p-6 lg:px-8 ml-8;
 }
 
 .brand {
@@ -31,11 +31,11 @@
 }
 
 .menu {
-  @apply hidden lg:flex lg:gap-x-12;
+  @apply hidden lg:flex my-6;
 }
 
 .menu-item {
-  @apply relative;
+  @apply relative ml-16;
 }
 
 .menu-item-button {
@@ -51,7 +51,7 @@
 }
 
 .languages {
-  @apply hidden lg:flex lg:flex-1 lg:justify-end;
+  @apply hidden lg:flex lg:flex-1 lg:justify-end mr-8;
 }
 
 .languages-link {
